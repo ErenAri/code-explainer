@@ -1,4 +1,5 @@
-.env
+# venv klasörü hariç
+venv/
 __pycache__/
 logs.txt
 *.pyc
