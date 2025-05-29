@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Explainer</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 40px; }
+        textarea { width: 100%; padding: 10px; font-size: 16px; font-family: monospace; }
+        input[type="submit"] {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        pre {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 6px;
+            white-space: pre-wrap;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Python Code Explainer</h2>
+    <form method="post">
+        <textarea name="code" rows="10" placeholder="Paste your Python code here...">{{ user_code }}</textarea><br><br>
+        <input type="submit" value="Explain Code">
+    </form>
+
+    {% if explanation %}
+        <h3>Explanation:</h3>
+        <pre>{{ explanation }}</pre>
+    {% endif %}
+</body>
+</html>
